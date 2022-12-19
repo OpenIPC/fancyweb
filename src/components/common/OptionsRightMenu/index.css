@@ -1,0 +1,25 @@
+.aside-menu {
+  top: 36px;
+  bottom: 36px;
+  right: 0px;
+  width: 348px;
+  transform: translateX(300px);
+  z-index: 999;
+  will-change: contents;
+  transition: all 0.3s;
+  border-radius: 2px;
+  @apply bg-white;
+  &__button {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.16);
+    @apply w-12 cursor-pointer;
+    & .arrow {
+      transition: transform 0.3s;
+    }
+  }
+  &.active {
+    transform: translateX(0);
+    & .aside-menu__button > .arrow {
+      transform: rotate(180deg);
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "private": true,
+  "name": "preact-tailwind",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "preact build ",
+    "serve": "sirv build --cors --single",
+    "dev": "preact watch",
+    "lint": "eslint src",
+    "test": "jest",
+    "deploy": "pm2 start ./server.sh --name openips"
+  },
+  "eslintConfig": {
+    "extends": "preact"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.2.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-jsx-pragmatic": "^1.0.2",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "cssnano": "^4.1.10",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-preact-pure": "^2.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "jest-preset-preact": "^1.0.0",
+    "postcss-custom-properties": "^9.1.1",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.1",
+    "postcss-combine-duplicated-selectors": "^8.1.0",
+    "preact-cli": "^3.0.0-rc.6",
+    "preact-render-spy": "^1.2.1",
+    "purgecss-webpack-plugin": "^0.20.1",
+    "sirv-cli": "^0.4.5",
+    "style-loader": "^1.2.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack-modules": "^1.0.0",
+    "yarn": "^1.22.4",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "normalize.css": "^8.0.1",
+    "path": "^0.12.7",
+    "preact": "^10.3.2",
+    "preact-render-to-string": "^5.1.4",
+    "preact-router": "^3.2.1",
+    "react-dropdown": "^1.7.0",
+    "react-rangeslider": "^2.2.0",
+    "react-text-mask": "^5.4.3",
+    "storeon": "^3.0.2",
+    "tailwindcss": "^0.4.3",
+    "text-mask-addons": "^3.8.0"
+  },
+  "jest": {
+    "preset": "jest-preset-preact",
+    "setupFiles": [
+      "<rootDir>/tests/__mocks__/browserMocks.js",
+      "<rootDir>/tests/__mocks__/setupTests.js"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "ie 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

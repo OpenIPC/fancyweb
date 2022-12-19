@@ -1,0 +1,47 @@
+input[type='text'],
+input[type='password'],
+input[type='number'] {
+    border: none;
+    outline: none;
+    width: 335px;
+    max-width: 335px;
+    caret-color: #fb3c4a;
+    cursor: text;
+    &.input-undeline {
+        @apply w-full border-fields border-0 border-b border-solid mb-8 h-12;
+    }
+    & ::-ms-clear {
+        display: none;
+    }
+
+    & ::-webkit-outer-spin-button,
+    ::-webkit-inner-spin-button,
+    ::-webkit-clear-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    & :focus {
+        @apply border-hover_menu;
+    }
+
+    & ::placeholder {
+        @apply text-fields;
+    }
+}
+
+.input-field {
+    &.error {
+        & input {
+            @apply border-accent;
+        }
+    }
+    &.password {
+        & input {
+            @apply pr-24;
+        }
+    }
+}
+.error-text {
+    @apply text-accent text-xs;
+}

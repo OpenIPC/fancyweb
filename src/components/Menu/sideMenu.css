@@ -1,0 +1,131 @@
+.side-menu {
+    max-width: 340px;
+}
+
+/* Общий блок с навигацией */
+.nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+    @apply bg-primary;
+}
+
+/* Элементы  и ссылки первого уровня */
+.nav__item {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    overflow: hidden;
+
+    @apply bg-primary;
+    &.active .nav__item-link > .nav__submenu {
+        max-height: 100vh;
+    }
+    &.active .nav__item-link > .arrow {
+        transform: rotate(-90deg);
+    }
+}
+
+.nav__item-link {
+    text-decoration: none;
+    @apply relative flex items-center py-16 text-lg px-36 bg-primary text-white border-transparent border-l-4;
+    &:hover,
+    &:focus {
+        @apply bg-hover_menu border-accent border-l-4;
+        & .arrow {
+            @apply text-white;
+        }
+    }
+    &.active {
+        @apply bg-hover_menu border-accent border-l-4;
+
+        & .arrow {
+            transform: rotate(-90deg);
+            @apply text-white;
+        }
+        & ~ .nav__submenu {
+            max-height: 100rem;
+        }
+    }
+    &.active_menu {
+        & .arrow {
+            transform: rotate(-90deg);
+            @apply text-white;
+        }
+        & ~ .nav__submenu {
+            max-height: 100rem;
+        }
+    }
+    &.nav__submenu-link.active {
+        & .arrow {
+            transform: rotate(0);
+            @apply text-white;
+        }
+    }
+
+    & .arrow {
+        transition: all 0.3s;
+        right: 15px;
+        bottom: 0;
+        top: 0;
+        position: absolute;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        will-change: contents;
+        justify-content: center;
+        transform: rotate(0deg);
+        @apply fill-current text-fields;
+        & svg {
+            fill: inherit;
+        }
+    }
+}
+
+/* Блок второго уровня */
+.nav__submenu {
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    transition: max-height 0.6s;
+    text-decoration: none;
+    @apply relative block text-lg bg-primary text-white;
+    &:hover,
+    &:focus {
+        @apply bg-hover_menu;
+        & .arrow {
+            @apply text-white;
+        }
+    }
+    & .arrow {
+        right: 15px;
+        transition: all 0.3s;
+        will-change: contents;
+        transform: rotate(0deg);
+        @apply absolute  pin-t pin-b flex items-center justify-center h-full fill-current;
+        & svg {
+            fill: inherit;
+        }
+    }
+}
+
+/* Ссылка второго  уровня */
+.nav__submenu-link {
+    text-decoration: none;
+    transition: background 0.2s ease-in;
+    padding: 0 0 0 40px;
+    @apply relative block;
+    &-border {
+        @apply border-b-2 border-hover_menu;
+        & p {
+            padding: 16px 40px;
+            @apply text-white;
+        }
+    }
+    &:hover,
+    &:focus {
+        @apply bg-hover_menu border-accent;
+    }
+}

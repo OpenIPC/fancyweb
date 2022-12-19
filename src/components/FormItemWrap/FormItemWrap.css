@@ -1,0 +1,20 @@
+.form-item {
+    &__wrap {
+        border-radius: 2px;
+        @apply bg-white flex items-center py-16 h-16;
+        &.dropdown .form-item__component {
+            @apply px-0;
+        }
+    }
+    &__name {
+        width: 230px;
+        min-width: 230px;
+        @apply flex items-center text-sm pl-24 pr-16 h-full border-fields border-0 border-r-2;
+        &.no-border {
+            border: none;
+        }
+    }
+    &__component {
+        @apply flex items-center px-24 h-full w-full;
+    }
+}

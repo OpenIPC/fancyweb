@@ -1,0 +1,38 @@
+/* @import './../../node_modules/normalize.css/normalize.css'; */
+html {
+    min-width: 1200px;
+    overflow: auto;
+}
+body {
+    padding: 0;
+    margin: 0;
+
+    @apply text-primary;
+}
+#app {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+a {
+    &:hover {
+        @apply text-primary;
+    }
+    &:visisted {
+        @apply text-white;
+    }
+    @apply text-primary;
+}
+input,
+a,
+select,
+textarea {
+    text-decoration: none;
+    outline: none;
+    cursor: default;
+    @apply no-underline;
+    -webkit-appearance: none;
+}
+ul {
+    list-style: none;
+    text-decoration: none;
+}

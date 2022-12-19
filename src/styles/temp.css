@@ -1,0 +1,14 @@
+.form-login {
+    width: 350px;
+}
+.form-wrap {
+    width: 100%;
+    max-width: 632px;
+}
+
+.main-content overflow-hidden {
+    margin-left: 340px;
+    width: 100%;
+    max-width: 100%;
+    flex: 1;
+}

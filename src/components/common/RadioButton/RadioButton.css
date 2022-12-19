@@ -1,0 +1,54 @@
+/* Create a custom radio button */
+.checkcontainer {
+    height: 21px;
+    width: 21px;
+}
+.radiobtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 21px;
+    width: 21px;
+  border-radius: 50%;
+  @apply bg-white border-fields border-2 border-solid;
+  &:hover {
+    @apply border-accent;
+  }
+}
+
+/* On mouse-over, add a grey background color */
+.checkcontainer:hover input ~ .radiobtn {
+  @apply bg-white;
+}
+.checkcontainer input ~ .label {
+    margin-left: 5px;
+  @apply text-secondary;
+}
+
+/* When the radio button is checked, add a blue background */
+.checkcontainer input:checked ~ .radiobtn {
+  @apply border-accent;
+}
+.checkcontainer input:checked ~ .label {
+  @apply text-primary;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radiobtn:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.checkcontainer input:checked ~ .radiobtn:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.checkcontainer .radiobtn:after {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  @apply bg-accent;
+}

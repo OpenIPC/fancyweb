@@ -1,0 +1,30 @@
+.modal {
+    background-color: rgba(33, 35, 48, 0.6);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 9999;
+    transition: visibility 0.4s, opacity 0.3s;
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+    &-body {
+        padding: 100px;
+        &__exit {
+            & .content {
+                min-width: 400px;
+                @apply flex flex-col;
+            }
+        }
+        & .close-icon {
+            top: 20px;
+            right: 20px;
+            fill: #212330;
+            &:focus,
+            :hover {
+                fill: #fb3c4a;
+            }
+        }
+    }
+}

@@ -1,2 +1,1 @@
-# fancyweb
-Fancy WEB interface using React
+docs/index.md

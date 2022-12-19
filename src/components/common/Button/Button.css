@@ -1,0 +1,20 @@
+.button {
+  transition: background-color 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  max-width: 350px;
+  width: auto;
+  height: 48px;
+  @apply px-40 py-12 flex justify-center items-center  text-white text-lg;
+  &.accent {
+    @apply bg-accent;
+    &:hover {
+      background-color: #ff5864;
+    }
+    &:focus {
+      border-radius: 2px;
+      @apply border-primary border-2 border border-solid;
+    }
+  }
+  &.ghost {
+    @apply border-primary border border-solid text-primary;
+  }
+}
