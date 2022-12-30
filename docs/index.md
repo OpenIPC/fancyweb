@@ -4,7 +4,7 @@
 
 Node JS version 12 or 14 is required
 
-We are very grateful to Nikita Azamatov and his team
+We are very grateful to [Nikita Azamatov] and his team
 
 ## preact-tailwind
 
